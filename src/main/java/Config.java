@@ -1,7 +1,9 @@
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 @Configuration
+@ComponentScan("app")
 public class Config extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
@@ -10,11 +12,11 @@ public class Config extends AbstractAnnotationConfigDispatcherServletInitializer
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[0];
+        return new Class[]{Config.class};
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[0];
+        return new String[]{"/"};
     }
 }
