@@ -2,14 +2,24 @@ package app;
 
 public class MobilePhone {
 
+    private long id;
     private String system;
     private int resolution;
     private int prodYear;
 
-    public MobilePhone(String system, int resolution, int prodYear) {
+    public MobilePhone(long id, String system, int resolution, int prodYear) {
+        this.id = id;
         this.system = system;
         this.resolution = resolution;
         this.prodYear = prodYear;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getSystem() {
@@ -39,7 +49,8 @@ public class MobilePhone {
     @Override
     public String toString() {
         return "MobilePhone{" +
-                "system='" + system + '\'' +
+                "id=" + id +
+                ", system='" + system + '\'' +
                 ", resolution=" + resolution +
                 ", prodYear=" + prodYear +
                 '}';
