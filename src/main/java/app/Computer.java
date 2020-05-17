@@ -38,4 +38,13 @@ public class Computer {
     public void setMemorySize(int memorySize) {
         this.memorySize = memorySize;
     }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "ddrType='" + ddrType + '\'' +
+                ", mhz=" + mhz +
+                ", memorySize=" + memorySize +
+                '}';
+    }
 }
