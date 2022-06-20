@@ -7,6 +7,9 @@ public class MobilePhone {
     private int resolution;
     private int prodYear;
 
+    public MobilePhone() {
+    }
+
     public MobilePhone(long id, String system, int resolution, int prodYear) {
         this.id = id;
         this.system = system;
